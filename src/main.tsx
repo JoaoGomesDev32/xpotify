@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <div>
+      <a href="http://localhost:8080/login">Login on Spotify</a>
+    </div>
   </StrictMode>,
 )
