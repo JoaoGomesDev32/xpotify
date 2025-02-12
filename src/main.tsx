@@ -1,10 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from "react-router";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import AppRoutes from './routes'
+import { RecoilRoot } from 'recoil';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <div>
-      <a href="http://localhost:8080/login">Login on Spotify</a>
-    </div>
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <RecoilRoot>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </RecoilRoot>
+  </React.StrictMode>,
+);
