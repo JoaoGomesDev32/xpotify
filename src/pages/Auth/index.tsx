@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 import { atomToken } from "../../stores/atoms";
 import { useParams } from "react-router-dom";
@@ -11,7 +11,7 @@ const Auth = () => {
         if (token) {
             setToken(token);
         }
-    }, [token]);
+    }, [token, setToken]);
 
     return <div>Loading...</div>;
 };
